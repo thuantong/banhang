@@ -57,13 +57,13 @@ header("Cache-Control: max-age=2592000");
                         <img src="img/img-profile.jpg" alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello <?php echo Session::get('adminName'); ?></li>
-                            <?php
+                            <li>Hello <?php echo Session::get('adminName');?></li>
+<?php
 if (isset($_GET['action']) && $_GET['action'] == 'logout') {
 	Session::destroy();
 }
 ?>
-                            <li><a href="?action=logout">Logout</a></li>
+<li><a href="?action=logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>

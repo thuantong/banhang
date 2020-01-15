@@ -5,9 +5,9 @@ include '../classes/adminLogin.php';
 $class = new adminLogin();
 /*Sử dụng phương thức gửi dữ liệu bằng post or get*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	$adminusername = $_POST['adminname']; //Tên(name trong form) ntn thì để ở trong biến post như thế
-	$adminpassed = md5($_POST['adminpassword']);
-	$check_login = $class->Loginadmin($adminusername, $adminpassed);
+	$adminusername = $_POST['adminname'];//Tên(name trong form) ntn thì để ở trong biến post như thế
+	$adminpassed   = md5($_POST['adminpassword']);
+	$check_login   = $class->Loginadmin($adminusername, $adminpassed);
 }
 
 ?>
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				<input type="password" placeholder="Password" required="" name="adminpassword"/>
 			</div>
 			<span>
-			<?php
+<?php
 if (isset($check_login)) {
 	echo $check_login;
 }
